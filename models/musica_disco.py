@@ -2,6 +2,7 @@ from odoo import fields, models
 
 
 class Disco(models.Model):
+    # Álvaro Sobrino
     _name = 'musica.disco'
     _description = 'Disco'
 
