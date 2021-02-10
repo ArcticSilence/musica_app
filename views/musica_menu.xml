@@ -1,0 +1,20 @@
+<odoo>
+    <menuitem id="musica_menu"
+              name="Musica"/>
+    <act_window id="action_musica_disco"
+                name="Discos"
+                res_model="musica.disco"
+                view_mode="tree,form"/>
+    <menuitem id="menu_musica_disco"
+              name="Discos"
+              action="action_musica_disco"
+              parent="musica_menu"/>
+    <act_window id="action_musica_grupo"
+                name="Grupos"
+                res_model="musica.grupo"
+                view_mode="tree,form"/>
+    <menuitem id="menu_musica_grupo"
+              name="Grupos"
+              action="action_musica_grupo"
+              parent="musica_menu"/>
+</odoo>

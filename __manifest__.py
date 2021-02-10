@@ -2,11 +2,15 @@
     'name': 'Aplicación de gestión de discos',
     'description': 'Gestiona discos, grupos, artistas, canciones, etc..',
     'author': ['Guillermo Bort', 'Nacho Sanz', 'Álvaro Sobrino'],
-    'depends': True,
+    'depends': ['base'],
+    'application': True,
     'installable': True,
     'data': [
-        'security/disco_security.xml'
-        'views/disco_view.xml'
+        'security/musica_security.xml',
+        'security/ir.model.access.csv',
+        'views/musica_menu.xml',
+        'views/disco_view.xml',
+        'views/grupo_view.xml',
     ],
     'demo': [],
 }

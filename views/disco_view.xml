@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_form_disco" model="ir.ui.view">
+        <field name="name">Formulario Disco</field>
+        <field name="model">musica.disco</field>
+        <field name="arch" type="xml">
+            <form string="Disco">
+                <header>
+                </header>
+                <sheet>
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="name"/>
+                            <field name="ean"/>
+                            <field name="fecha_publicacion"/>
+                            <field name="genero"/>
+                        </group>
+                        <group name="group_right">
+                            <field name="copias"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_book" model="ir.ui.view">
+        <field name="name">Lista discos</field>
+        <field name="model">musica.disco</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="ean"/>
+                <field name="fecha_publicacion"/>
+                <field name="genero"/>
+                <field name="copias"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_search_disco" model="ir.ui.view">
+        <field name="name">Filtros disco</field>
+        <field name="model">musica.disco</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <filter name="filter_inactive"
+                        string="Inactive"
+                        domain="[('active','=',False)]"/>
+                <filter name="filter_active"
+                        string="Active"
+                        domain="[('active','=',True)]"/>
+            </search>
+        </field>
+    </record>
+</odoo>

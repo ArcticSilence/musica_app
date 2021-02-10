@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_form_grupo" model="ir.ui.view">
+        <field name="name">Formulario grupo</field>
+        <field name="model">musica.grupo</field>
+        <field name="arch" type="xml">
+            <form string="Book">
+                <sheet>
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="name"/>
+                            <field name="pais"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_grupo" model="ir.ui.view">
+        <field name="name">Lista grupos</field>
+        <field name="model">musica.grupo</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="pais"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_search_grupo" model="ir.ui.view">
+        <field name="name">Filtros grupo</field>
+        <field name="model">musica.grupo</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <filter name="filter_inactive"
+                        string="Inactive"
+                        domain="[('active','=',False)]"/>
+                <filter name="filter_active"
+                        string="Active"
+                        domain="[('active','=',True)]"/>
+            </search>
+        </field>
+    </record>
+</odoo>

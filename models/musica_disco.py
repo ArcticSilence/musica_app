@@ -20,13 +20,18 @@ class Disco(models.Model):
 
     # Date fields:
     fecha_publicacion = fields.Date()
+    genero = fields.Selection(
+        [('rock', 'Rock'), ('metal', 'Metal'), ('electronica', 'Electrónica'), ('reggae', 'Reggae')])
+
+    # Numeric fields:
+    copias = fields.Integer(default=1)
 
     # Relational fields:
-    grupo = fields.One2one()
-    companyia = fields.One2many()
+    # grupo = fields.One2one()
+    # companyia = fields.One2many()
 
-    def _check_ean(self):
-        """Check one Book's ISBN"""
+    def _check_ISBN(self):
+        """Check one Disco's ISBN"""
         self.ensure_one()
         digits = [int(x) for x in self.isbn if x.isdigit()]
         if len(digits) == 13:
@@ -40,6 +45,6 @@ class Disco(models.Model):
         for disco in self:
             if not disco.ean:
                 raise Warning('Please provide an ISBN13 for %s' % book.name)
-            if disco.ean and not disco._check_ean:
+            if disco.ean and not disco._check_ISBN:
                 raise Warning('%s is an invalid ISBN' % book.isbn)
         return True
