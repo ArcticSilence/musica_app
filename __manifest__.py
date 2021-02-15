@@ -11,6 +11,8 @@
         'views/musica_menu.xml',
         'views/disco_view.xml',
         'views/grupo_view.xml',
+        'views/club_view.xml',
+        'views/companyia_view.xml',
     ],
     'demo': [],
 }
