@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_form_cancion" model="ir.ui.view">
+        <field name="name">Formulario Cancion</field>
+        <field name="model">musica.cancion</field>
+        <field name="arch" type="xml">
+            <form string="Cancion">
+                <header>
+                </header>
+                <sheet>
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="cod"/>
+                            <field name="titulo"/>
+                            <field name="duracion"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_book" model="ir.ui.view">
+        <field name="name">Lista </field>
+        <field name="model">musica.disco</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="ean"/>
+                <field name="fecha_publicacion"/>
+                <field name="genero"/>
+                <field name="copias"/>
+                <field name="grupo_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_search_disco" model="ir.ui.view">
+        <field name="name">Filtros Cancion</field>
+        <field name="model">musica.cancion</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <filter name="filter_inactive"
+                        string="Inactive"
+                        domain="[('active','=',False)]"/>
+                <filter name="filter_active"
+                        string="Active"
+                        domain="[('active','=',True)]"/>
+            </search>
+        </field>
+    </record>
+</odoo>

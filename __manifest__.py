@@ -13,6 +13,8 @@
         'views/grupo_view.xml',
         'views/club_view.xml',
         'views/companyia_view.xml',
+        'views/artista_view.xml',
+        'views/cancion_view.xml',
     ],
     'demo': [],
 }

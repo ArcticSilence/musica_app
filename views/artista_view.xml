@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_form_artista" model="ir.ui.view">
+        <field name="name">Formulario Artista</field>
+        <field name="model">musica.artista</field>
+        <field name="arch" type="xml">
+            <form string="Artista">
+                <header>
+                </header>
+                <sheet>
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="dni"/>
+                            <field name="nombre"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_book" model="ir.ui.view">
+        <field name="name">Lista artistas</field>
+        <field name="model">musica.artista</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="dni"/>
+                <field name="nombre"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_search_artista" model="ir.ui.view">
+        <field name="name">Filtros artista</field>
+        <field name="model">musica.artista</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <filter name="filter_inactive"
+                        string="Inactive"
+                        domain="[('active','=',False)]"/>
+                <filter name="filter_active"
+                        string="Active"
+                        domain="[('active','=',True)]"/>
+            </search>
+        </field>
+    </record>
+</odoo>
