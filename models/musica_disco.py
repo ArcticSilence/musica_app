@@ -27,7 +27,7 @@ class Disco(models.Model):
     copias = fields.Integer(default=1)
 
     # Relational fields:
-    # grupo = fields.One2one()
+    grupo_id = fields.Many2one('musica.grupo', string='Grupo')
     # companyia = fields.One2many()
 
     def _check_ISBN(self):

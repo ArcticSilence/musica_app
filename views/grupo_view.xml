@@ -9,7 +9,7 @@
                     <group name="group_top">
                         <group name="group_left">
                             <field name="name"/>
-                            <field name="pais"/>
+                            <field name="pais_id"/>
                         </group>
                     </group>
                 </sheet>
@@ -23,7 +23,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="pais"/>
+                <field name="pais_id"/>
             </tree>
         </field>
     </record>

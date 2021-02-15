@@ -17,6 +17,7 @@
                         </group>
                         <group name="group_right">
                             <field name="copias"/>
+                            <field name="grupo_id"/>
                         </group>
                     </group>
                 </sheet>
@@ -34,6 +35,7 @@
                 <field name="fecha_publicacion"/>
                 <field name="genero"/>
                 <field name="copias"/>
+                <field name="grupo_id"/>
             </tree>
         </field>
     </record>

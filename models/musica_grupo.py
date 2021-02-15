@@ -16,4 +16,6 @@ class Grupo(models.Model):
         required=True,
         translate=False,
     )
-    pais = fields.Char('País')
+
+    # Relational fields:
+    pais_id = fields.Many2one('res.country', string="País grupo")
