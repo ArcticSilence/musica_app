@@ -27,3 +27,6 @@ class Artista(models.Model):
         translate=False,
     )
 
+    # Relational fields:
+    grupo_id = fields.Many2one('musica.grupo', string='Grupo')
+

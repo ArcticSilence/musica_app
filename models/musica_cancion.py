@@ -21,3 +21,6 @@ class Cancion(models.Model):
     cod = fields.Integer
     duracion = fields.Float((15, 5))
 
+    # Relational fields:
+    grupo_id = fields.Many2one('musica.artista', string='Artista')
+
