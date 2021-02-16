@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_form_club" model="ir.ui.view">
+        <field name="name">Formulario Club</field>
+        <field name="model">musica.club</field>
+        <field name="arch" type="xml">
+            <form string="Club">
+                <header>
+                </header>
+                <sheet>
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="cod"/>
+                            <field name="name"/>
+                            <field name="sede"/>
+                            <field name="num"/>
+                        </group>
+                        <group name="group_right">
+                            <field name="cod_group"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_book" model="ir.ui.view">
+        <field name="name">Lista clubs</field>
+        <field name="model">musica.club</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="cod"/>
+                <field name="name"/>
+                <field name="sede"/>
+                <field name="num"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_search_club" model="ir.ui.view">
+        <field name="name">Filtros clubs</field>
+        <field name="model">musica.club</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <filter name="filter_inactive"
+                        string="Inactive"
+                        domain="[('active','=',False)]"/>
+                <filter name="filter_active"
+                        string="Active"
+                        domain="[('active','=',True)]"/>
+            </search>
+        </field>
+    </record>
+</odoo>
