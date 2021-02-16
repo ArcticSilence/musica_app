@@ -17,14 +17,6 @@
               name="Grupos"
               action="action_musica_grupo"
               parent="musica_menu"/>
-    <act_window id="action_musica_club"
-                name="Clubs"
-                res_model="musica.club"
-                view_mode="tree,form"/>
-    <menuitem id="menu_musica_club"
-              name="Clubs"
-              action="action_musica_club"
-              parent="musica_menu"/>
     <act_window id="action_musica_companyia"
                 name="Companyias"
                 res_model="musica.companyia"

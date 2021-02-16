@@ -1,4 +1,5 @@
-from odoo import fields, models
+from odoo import fields, models, api
+from odoo.exceptions import ValidationError
 
 
 class Disco(models.Model):
@@ -25,15 +26,23 @@ class Disco(models.Model):
 
     # Numeric fields:
     copias = fields.Integer(default=1)
+    puntuacion = fields.Integer(default=5)
 
     # Relational fields:
     grupo_id = fields.Many2one('musica.grupo', string='Grupo')
+    comp_id = fields.Many2one('musica.companyia', string='Compañía')
+
     # companyia = fields.One2many()
 
-    def _check_ISBN(self):
+    @api.constrains('puntuacion')
+    def _check_value(self):
+        if self.puntuacion > 10 or self.puntuacion < 1:
+            raise ValidationError('La puntuación debe estar entre 1-10.')
+
+    def _check_EAN(self):
         """Check one Disco's ISBN"""
         self.ensure_one()
-        digits = [int(x) for x in self.isbn if x.isdigit()]
+        digits = [int(x) for x in self.ean if x.isdigit()]
         if len(digits) == 13:
             ponderators = [1, 3] * 6
             total = sum(a * b for a, b in zip(digits[:12], ponderators))
@@ -41,10 +50,10 @@ class Disco(models.Model):
             check = 10 - remain if remain != 0 else 0
             return digits[-1] == check
 
-    def button_check_isbn(self):
+    def button_check_ean(self):
         for disco in self:
             if not disco.ean:
-                raise Warning('Please provide an ISBN13 for %s' % book.name)
-            if disco.ean and not disco._check_ISBN:
-                raise Warning('%s is an invalid ISBN' % book.isbn)
+                raise Warning('Please provide an EAN13 for %s' % disco.name)
+            if disco.ean and not disco._check_ean:
+                raise Warning('%s is an invalid ISBN' % disco.ean)
         return True

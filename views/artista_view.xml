@@ -1,15 +1,17 @@
 <?xml version="1.0"?>
 <odoo>
-    <record id="view_form_grupo" model="ir.ui.view">
-        <field name="name">Formulario grupo</field>
-        <field name="model">musica.grupo</field>
+    <record id="view_form_artista" model="ir.ui.view">
+        <field name="name">Formulario Artista</field>
+        <field name="model">musica.artista</field>
         <field name="arch" type="xml">
-            <form string="Book">
+            <form string="Artista">
+                <header>
+                </header>
                 <sheet>
                     <group name="group_top">
                         <group name="group_left">
-                            <field name="name"/>
-                            <field name="pais_id"/>
+                            <field name="dni"/>
+                            <field name="nombre"/>
                         </group>
                     </group>
                 </sheet>
@@ -17,21 +19,20 @@
         </field>
     </record>
 
-    <record id="view_tree_grupo" model="ir.ui.view">
-        <field name="name">Lista grupos</field>
-        <field name="model">musica.grupo</field>
+    <record id="view_tree_book" model="ir.ui.view">
+        <field name="name">Lista artistas</field>
+        <field name="model">musica.artista</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>
-                <field name="pais_id"/>
-                <field name="puntuacion"/>
+                <field name="dni"/>
+                <field name="nombre"/>
             </tree>
         </field>
     </record>
 
-    <record id="view_search_grupo" model="ir.ui.view">
-        <field name="name">Filtros grupo</field>
-        <field name="model">musica.grupo</field>
+    <record id="view_search_artista" model="ir.ui.view">
+        <field name="name">Filtros artista</field>
+        <field name="model">musica.artista</field>
         <field name="arch" type="xml">
             <search>
                 <field name="name"/>
