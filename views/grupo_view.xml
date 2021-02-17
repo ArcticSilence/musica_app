@@ -14,7 +14,7 @@
                         </group>
                         <group name="group_right">
                             <field name="anyo"/>
-                            <field name="enActivo"/>
+                            <!--<field name="enactivo"/>-->
                         </group>
                     </group>
                 </sheet>
@@ -31,7 +31,7 @@
                 <field name="pais_id"/>
                 <field name="anyo"/>
                 <field name="puntuacion"/>
-                <field name="stringActivo"/>
+                <!--<field name="stringactivo"/>-->
             </tree>
         </field>
     </record>

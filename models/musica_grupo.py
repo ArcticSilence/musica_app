@@ -1,25 +1,10 @@
 from odoo import fields, models, api
 
 
-def grupo_en_activo(enactivo):
-    if enactivo:
-        return "En activo"
-    else:
-        return "Disuelto"
-
 class Grupo(models.Model):
     _name = 'musica.grupo'
     _description = 'Grupo'
     _order = 'name'
-
-    @api.depends('disco_id.puntuacion')
-    def _calcular_media(self):
-        total = 0
-        recordset = self.env['musica.disco'].search([])
-        for rec in recordset:
-            if rec.grupo_id == self.id:
-                total += rec.puntuacion
-        total = total / recordset.size
 
     # String fields:
     name = fields.Char(
@@ -41,5 +26,19 @@ class Grupo(models.Model):
     pais_id = fields.Many2one('res.country', string="País del grupo")
 
     # Other fields:
-    enactivo = fields.Boolean('¿En activo?', default=True)
-    stringactivo = grupo_en_activo(enactivo)
+    # enactivo = fields.Boolean('¿En activo?', default=True)
+    # stringactivo = fields.Char(compute='grupo_en_activo')
+
+    @api.depends('disco_id')
+    def _calcular_media(self):
+        self.puntuacion = 8
+        cont = 0
+        for rec in self.disco_id:
+            self.puntuacion = self.puntuacion + rec.puntuacion
+            cont += 1
+
+    def grupo_en_activo(self):
+        if self.enactivo:
+            return "En activo"
+        else:
+            return "Disuelto"
