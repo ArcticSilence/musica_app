@@ -7,7 +7,7 @@ class Artista(models.Model):
     _description = 'Artista'
 
     # String fields:
-    name = fields.Char(
+    dni = fields.Char(
         'dni',
         default=None,
         index=True,

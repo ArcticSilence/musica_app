@@ -4,7 +4,7 @@
         <field name="name">Formulario grupo</field>
         <field name="model">musica.grupo</field>
         <field name="arch" type="xml">
-            <form string="Book">
+            <form string="Grupo">
                 <sheet>
                     <group name="group_top">
                         <group name="group_left">
@@ -30,8 +30,8 @@
                 <field name="name"/>
                 <field name="pais_id"/>
                 <field name="anyo"/>
-                <!--<field name="puntuacion"/>-->
-                <field name="enActivo"/>
+                <field name="puntuacion"/>
+                <field name="stringActivo"/>
             </tree>
         </field>
     </record>

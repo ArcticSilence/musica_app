@@ -7,7 +7,7 @@ class Cancion(models.Model):
     _description = 'Cancion'
 
     # String fields:
-    name = fields.Char(
+    titulo = fields.Char(
         'Titulo',
         default=None,
         index=True,
@@ -19,7 +19,7 @@ class Cancion(models.Model):
 
     # Numeric fields:
     cod = fields.Integer
-    duracion = fields.Float((15, 5))
+    duracion = fields.Float()
 
     # Relational fields:
     grupo_id = fields.Many2one('musica.artista', string='Artista')

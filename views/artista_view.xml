@@ -11,7 +11,7 @@
                     <group name="group_top">
                         <group name="group_left">
                             <field name="dni"/>
-                            <field name="nombre"/>
+                            <field name="name"/>
                         </group>
                     </group>
                 </sheet>
@@ -25,7 +25,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="dni"/>
-                <field name="nombre"/>
+                <field name="name"/>
             </tree>
         </field>
     </record>

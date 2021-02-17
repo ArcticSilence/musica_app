@@ -14,6 +14,7 @@
                             <field name="ean"/>
                             <field name="fecha_publicacion"/>
                             <field name="genero"/>
+                            <field name="imagen_disco"/>
                         </group>
                         <group name="group_right">
                             <field name="copias"/>
@@ -40,6 +41,7 @@
                 <field name="grupo_id"/>
                 <field name="comp_id"/>
                 <field name="puntuacion"/>
+                <field name="imagen_disco" widget="image" height="100"/>
             </tree>
         </field>
     </record>

@@ -32,6 +32,9 @@ class Disco(models.Model):
     grupo_id = fields.Many2one('musica.grupo', string='Grupo')
     comp_id = fields.Many2one('musica.companyia', string='Compañía')
 
+    # Other fields:
+    imagen_disco = fields.Image();
+
     @api.constrains('puntuacion')
     def _check_value(self):
         if self.puntuacion > 10 or self.puntuacion < 1:
