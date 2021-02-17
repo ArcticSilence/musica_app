@@ -16,19 +16,20 @@
                             <field name="fax"/>
                             <field name="tlfn"/>
                         </group>
-
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
 
+
+
     <record id="view_tree_book" model="ir.ui.view">
         <field name="name">Lista companyias</field>
         <field name="model">musica.companyia</field>
         <field name="arch" type="xml">
             <tree>
-               <field name="cod"/>
+                <field name="cod"/>
                 <field name="name"/>
                 <field name="dir"/>
                 <field name="fax"/>

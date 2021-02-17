@@ -29,8 +29,8 @@
         <field name="model">musica.club</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="cod"/>
                 <field name="name"/>
+                <field name="cod"/>
                 <field name="sede"/>
                 <field name="num"/>
             </tree>

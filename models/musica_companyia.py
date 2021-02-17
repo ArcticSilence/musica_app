@@ -8,7 +8,7 @@ class Companyia(models.Model):
     _description = 'Companyia'
     cod = fields.Integer('Codigo', required=True)
     name = fields.Char('Nombre')
-    dir = fields.Char('direccion')
+    dir = fields.Char('Direccion')
     fax = fields.Char('Fax')
     tlfn = fields.Char('Telefono')
     active = fields.Boolean('Active?', default=True)
