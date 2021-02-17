@@ -21,14 +21,14 @@
     </record>
 
     <!-- Musica User Artista -->
-    <record id="musica_group_user" model="res.groups">
+    <record id="musica_artista_user" model="res.groups">
         <field name="name">User</field>
         <field name="category_id" ref="module_musica_category"/>
         <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
     </record>
 
     <!-- Musica Manager Artista -->
-    <record id="musica_group_manager" model="res.groups">
+    <record id="musica_artista_manager" model="res.groups">
         <field name="name">Manager</field>
         <field name="category_id" ref="module_musica_category"/>
         <field name="implied_ids" eval="[(4, ref('musica_group_user'))]"/>
@@ -37,14 +37,14 @@
     </record>
 
     <!-- Musica User Cancion -->
-    <record id="musica_group_user" model="res.groups">
+    <record id="musica_cancion_user" model="res.groups">
         <field name="name">User</field>
         <field name="category_id" ref="module_musica_category"/>
         <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
     </record>
 
     <!-- Musica Manager Cancion -->
-    <record id="musica_group_manager" model="res.groups">
+    <record id="musica_cancion_manager" model="res.groups">
         <field name="name">Manager</field>
         <field name="category_id" ref="module_musica_category"/>
         <field name="implied_ids" eval="[(4, ref('musica_group_user'))]"/>
