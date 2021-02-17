@@ -18,7 +18,7 @@ class Cancion(models.Model):
     )
 
     # Numeric fields:
-    cod = fields.Integer
+    codigo = fields.Integer
     duracion = fields.Float()
 
     # Relational fields:
