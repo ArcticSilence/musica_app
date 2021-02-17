@@ -22,7 +22,7 @@
                 res_model="musica.companyia"
                 view_mode="tree,form"/>
     <menuitem id="menu_musica_comp"
-              name="Companyias"
+              name="Compañías"
               action="action_musica_companyia"
               parent="musica_menu"/>
     <act_window id="action_musica_club"
@@ -32,5 +32,13 @@
     <menuitem id="menu_musica_club"
               name="Clubs"
               action="action_musica_club"
+              parent="musica_menu"/>
+    <act_window id="action_musica_artista"
+                name="Artistas"
+                res_model="musica.artista"
+                view_mode="tree,form"/>
+    <menuitem id="menu_musica_artista"
+              name="Artistas"
+              action="action_musica_artista"
               parent="musica_menu"/>
 </odoo>

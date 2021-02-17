@@ -19,7 +19,7 @@ class Grupo(models.Model):
 
     # Numeric fields:
     disco_id = fields.Many2one('musica.disco', string="Disco")
-    # puntuacion = fields.Many2one('musica.disco', string='Puntuación', compute='_calcular_media', )
+    # puntuacion = fields.Float(string='Puntuación', compute='_calcular_media')
     anyo = fields.Integer(default=1900, string="Año de fundación");
 
     # Relational fields:
@@ -30,8 +30,9 @@ class Grupo(models.Model):
 
     @api.depends('disco_id.puntuacion')
     def _calcular_media(self):
-        total = 1
-        recordset = self.env['musica.disco']
+        total = 0
+        recordset = self.env['musica.disco'].search([])
         for rec in recordset:
-            if rec.id == self.id and rec.grupo_id == self.id:
+            if rec.grupo_id == self.id:
                 total += rec.puntuacion
+        total = total / recordset.size

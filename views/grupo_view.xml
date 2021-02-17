@@ -9,6 +9,7 @@
                     <group name="group_top">
                         <group name="group_left">
                             <field name="name"/>
+                            <!--<field name="puntuacion"/>-->
                             <field name="pais_id"/>
                         </group>
                         <group name="group_right">

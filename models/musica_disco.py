@@ -26,7 +26,7 @@ class Disco(models.Model):
 
     # Numeric fields:
     copias = fields.Integer(default=1)
-    puntuacion = fields.Integer(default=5)
+    puntuacion = fields.Float(default=5)
 
     # Relational fields:
     grupo_id = fields.Many2one('musica.grupo', string='Grupo')
