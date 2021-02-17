@@ -1,7 +1,14 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_grupo_user,GrupoUser,model_musica_disco,musica_group_user,1,0,0,0
-access_grupo_manager,GrupoManager,model_musica_disco,musica_group_manager,1,1,1,1
-access_categ_user,Category User Access,model_musica_grupo,musica_group_user,1,0,0,0
-access_categ_manager,Category Manager Access,model_musica_grupo,musica_group_manager,1,1,1,1
-access_comp_user,GrupoUser,model_musica_companyia,musica_group_user,1,0,0,0
-access_comp_manager,GrupoManager,model_musica_companyia,musica_group_manager,1,1,1,1
+access_disco_user,DiscoUser,model_musica_disco,musica_group_user,1,0,0,0
+access_disco_manager,DiscoManager,model_musica_disco,musica_group_manager,1,1,1,1
+access_grupo_user,GrupoUser,model_musica_grupo,musica_group_user,1,0,0,0
+access_grupo_manager,GrupoManager,model_musica_grupo,musica_group_manager,1,1,1,1
+access_comp_user,CompUser,model_musica_companyia,musica_group_user,1,0,0,0
+access_comp_manager,CompManager,model_musica_companyia,musica_group_manager,1,1,1,1
+access_club_user,ClubUser,model_musica_club,musica_group_user,1,0,0,0
+access_club_manager,ClubManager,model_musica_club,musica_group_manager,1,1,1,1
+access_cancion_user,CancionUser,model_musica_cancion,musica_group_user,1,0,0,0
+access_cancion_manager,CancionManager,model_musica_cancion,musica_group_manager,1,1,1,1
+access_artista_user,ArtistaUser,model_musica_artista,musica_group_user,1,0,0,0
+access_artista_manager,ArtistaManager,model_musica_artista,musica_group_manager,1,1,1,1
+

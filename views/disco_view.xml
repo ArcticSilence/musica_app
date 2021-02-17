@@ -27,7 +27,7 @@
         </field>
     </record>
 
-    <record id="view_tree_book" model="ir.ui.view">
+    <record id="view_tree_disco" model="ir.ui.view">
         <field name="name">Lista discos</field>
         <field name="model">musica.disco</field>
         <field name="arch" type="xml">
