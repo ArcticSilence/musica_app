@@ -18,9 +18,8 @@ class Cancion(models.Model):
     )
 
     # Numeric fields:
-    codigo = fields.Integer
+    codigo = fields.Integer()
     duracion = fields.Float()
 
     # Relational fields:
-    grupo_id = fields.Many2one('musica.artista', string='Artista')
-
+    disco_id = fields.Many2one('musica.disco', string='Disco')

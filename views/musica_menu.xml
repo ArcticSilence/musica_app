@@ -41,4 +41,12 @@
               name="Artistas"
               action="action_musica_artista"
               parent="musica_menu"/>
+    <act_window id="action_musica_cancion"
+                name="Canciones"
+                res_model="musica.cancion"
+                view_mode="tree,form"/>
+    <menuitem id="menu_musica_cancion"
+              name="Canciones"
+              action="action_musica_cancion"
+              parent="musica_menu"/>
 </odoo>

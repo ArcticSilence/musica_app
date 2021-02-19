@@ -5,8 +5,6 @@
         <field name="model">musica.disco</field>
         <field name="arch" type="xml">
             <form string="Disco">
-                <header>
-                </header>
                 <sheet>
                     <group name="group_top">
                         <group name="group_left">
@@ -21,6 +19,7 @@
                             <field name="grupo_id"/>
                             <field name="comp_id"/>
                             <field name="puntuacion"/>
+                            <field name="cancion_id"/>
                         </group>
                     </group>
                 </sheet>

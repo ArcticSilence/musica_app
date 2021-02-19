@@ -18,7 +18,7 @@ class Grupo(models.Model):
     )
 
     # Numeric fields:
-    disco_id = fields.Many2one('musica.disco', string="Disco")
+    disco_id = fields.One2many('musica.disco', 'grupo_id', string="Disco", readOnly=True)
     puntuacion = fields.Float(string='Puntuación', compute='_calcular_media')
     anyo = fields.Integer(default=1900, string="Año de fundación");
 
@@ -26,19 +26,13 @@ class Grupo(models.Model):
     pais_id = fields.Many2one('res.country', string="País del grupo")
 
     # Other fields:
-    # enactivo = fields.Boolean('¿En activo?', default=True)
-    # stringactivo = fields.Char(compute='grupo_en_activo')
+    enactivo = fields.Selection([('activo', 'Activo'), ('disuelto', 'disuelto')])
 
     @api.depends('disco_id')
     def _calcular_media(self):
-        self.puntuacion = 8
+        total = 0
         cont = 0
         for rec in self.disco_id:
-            self.puntuacion = self.puntuacion + rec.puntuacion
-            cont += 1
-
-    def grupo_en_activo(self):
-        if self.enactivo:
-            return "En activo"
-        else:
-            return "Disuelto"
+            total = total + rec.puntuacion
+            cont = cont + 1
+        self.puntuacion = total / cont;

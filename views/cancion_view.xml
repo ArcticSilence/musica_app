@@ -12,6 +12,7 @@
                         <field name="titulo"/>
                         <field name="codigo"/>
                         <field name="duracion"/>
+                        <field name="disco_id"/>
                     </group>
                 </sheet>
             </form>
@@ -19,13 +20,14 @@
     </record>
 
     <record id="view_tree_cancion" model="ir.ui.view">
-        <field name="name">Lista </field>
-        <field name="model">musica.disco</field>
+        <field name="name">Lista canciones</field>
+        <field name="model">musica.cancion</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="titulo"/>
                 <field name="codigo"/>
                 <field name="duracion"/>
+                <field name="disco_id"/>
             </tree>
         </field>
     </record>
