@@ -1,3 +1,61 @@
 <?xml version="1.0"?>
 <odoo noupdate="1">
+    <record model="musica.grupo" id="musica_grupo_rhcp">
+        <field name="name">Red Hot Chili Peppers</field>
+        <field name="anyo">1982</field>
+    </record>
+    <record model="musica.companyia" id="musica_companyia_domino">
+        <field name="cod">20</field>
+        <field name="name">Domino Records.</field>
+        <field name="dir">Fake Street, 123</field>
+        <field name="fax">245555667</field>
+        <field name="tlfn">243577775</field>
+    </record>
+    <record model="musica.club" id="musica_club_kitkatclub">
+        <field name="cod">30</field>
+        <field name="sede">Los Angeles</field>
+        <field name="name">KitKatClub</field>
+        <field name="num">70</field>
+        <field name="cod_group" ref="musica_grupo_rhcp"/>
+    </record>
+    <record model="musica.disco" id="musica_disco_californication">
+        <field name="name">Californication</field>
+        <field name="ean">45623134567</field>
+        <field name="fecha_publicacion">1998-06-08</field>
+        <field name="copias">15</field>
+        <field name="grupo_id" ref="musica_grupo_rhcp"/>
+        <field name="puntuacion">8.5</field>
+    </record>
+    <record model="musica.disco" id="musica_disco_mothersmilk">
+        <field name="name">Mother's Milk</field>
+        <field name="ean">45623132437</field>
+        <field name="fecha_publicacion">1989-08-16</field>
+        <field name="copias">25</field>
+        <field name="grupo_id" ref="musica_grupo_rhcp"/>
+        <field name="puntuacion">9.5</field>
+    </record>
+    <record model="musica.cancion" id="musica_cancion_scartissue">
+        <field name="titulo">Scar Tissue</field>
+        <field name="codigo">1</field>
+        <field name="duracion">3.52</field>
+        <field name="disco_id" ref="musica_disco_californication"/>
+    </record>
+    <record model="musica.cancion" id="musica_cancion_knockmedown">
+        <field name="titulo">Knock Me Down</field>
+        <field name="codigo">6</field>
+        <field name="duracion">3.45</field>
+        <field name="disco_id" ref="musica_disco_mothersmilk"/>
+    </record>
+    <record model="musica.cancion" id="musica_cancion_higherground">
+        <field name="titulo">Higher Ground</field>
+        <field name="codigo">2</field>
+        <field name="duracion">3.23</field>
+        <field name="disco_id" ref="musica_disco_mothersmilk"/>
+    </record>
+    <record model="musica.cancion" id="musica_cancion_californication">
+        <field name="titulo">Californication</field>
+        <field name="codigo">2</field>
+        <field name="duracion">4.02</field>
+        <field name="disco_id" ref="musica_disco_californication"/>
+    </record>
 </odoo>

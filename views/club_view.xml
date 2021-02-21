@@ -5,8 +5,6 @@
         <field name="model">musica.club</field>
         <field name="arch" type="xml">
             <form string="Club">
-                <header>
-                </header>
                 <sheet>
                     <group name="group_top">
                         <group name="group_left">
@@ -24,7 +22,7 @@
         </field>
     </record>
 
-    <record id="view_tree_book" model="ir.ui.view">
+    <record id="view_tree_club" model="ir.ui.view">
         <field name="name">Lista clubs</field>
         <field name="model">musica.club</field>
         <field name="arch" type="xml">
@@ -33,6 +31,7 @@
                 <field name="cod"/>
                 <field name="sede"/>
                 <field name="num"/>
+                <field name="cod_group"/>
             </tree>
         </field>
     </record>

@@ -18,7 +18,7 @@
               action="action_musica_grupo"
               parent="musica_menu"/>
     <act_window id="action_musica_companyia"
-                name="Companyias"
+                name="Compañías"
                 res_model="musica.companyia"
                 view_mode="tree,form"/>
     <menuitem id="menu_musica_comp"

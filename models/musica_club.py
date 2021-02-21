@@ -1,7 +1,5 @@
 from odoo import fields, models, api
 
-from odoo.exceptions import Warning
-
 
 class Club(models.Model):
     # Guillermo Bort

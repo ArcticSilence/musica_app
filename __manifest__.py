@@ -11,9 +11,12 @@
         'views/musica_menu.xml',
         'views/disco_view.xml',
         'views/grupo_view.xml',
+        'views/club_view.xml',
         'views/companyia_view.xml',
         'views/artista_view.xml',
         'views/cancion_view.xml',
     ],
-    'demo': [],
+    'demo': [
+        'data/disco_demo.xml',
+    ],
 }

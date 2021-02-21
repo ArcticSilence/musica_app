@@ -22,7 +22,7 @@ class Disco(models.Model):
     # Date fields:
     fecha_publicacion = fields.Date()
     genero = fields.Selection(
-        [('rock', 'Rock'), ('metal', 'Metal'), ('electronica', 'Electrónica'), ('reggae', 'Reggae')])
+        [('rock', 'Rock'), ('funk', 'Funk'), ('jazz', 'Jazz'), ('metal', 'Metal'), ('electronica', 'Electrónica'), ('reggae', 'Reggae')])
 
     # Numeric fields:
     copias = fields.Integer(default=1)
