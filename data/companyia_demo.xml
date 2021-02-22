@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<odoo noupdate="1">
+    <record model="musica.grupo" id="musica_grupo_hotdog">
+        <field name="name">Hot dogs</field>
+        <field name="anyo">1983</field>
+    </record>
+    <record model="musica.disco" id="musica_disco_dog">
+        <field name="name">dog</field>
+        <field name="ean">987456321</field>
+        <field name="fecha_publicacion">1910-06-28</field>
+        <field name="copias">1</field>
+        <field name="grupo_id" ref="musica_grupo_hotdog"/>
+        <field name="puntuacion">0.5</field>
+    </record>
+    <record model="musica.companyia" id="musica_companyia_cock">
+        <field name="cod">69</field>
+        <field name="name">cock´s spicy.</field>
+        <field name="dir">Dirty Avenue, 87</field>
+        <field name="fax">123654789</field>
+        <field name="tlfn">98745632</field>
+    </record>
+</odoo>
