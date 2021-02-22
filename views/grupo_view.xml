@@ -27,6 +27,7 @@
                                 <field name="rol"/>
                             </form>
                         </field>
+                        <field name="disco_id"/>
                     </group>
                 </sheet>
             </form>
