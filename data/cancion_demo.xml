@@ -1,9 +1,5 @@
 <?xml version="1.0"?>
 <odoo noupdate="1">
-    <record model="musica.grupo" id="musica_grupo_rhcp">
-        <field name="name">Red Hot Chili Peppers</field>
-        <field name="anyo">1982</field>
-    </record>
     <record model="musica.disco" id="musica_disco_californication">
         <field name="name">Californication</field>
         <field name="ean">45623134567</field>

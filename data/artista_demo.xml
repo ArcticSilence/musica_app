@@ -1,27 +1,23 @@
 <?xml version="1.0"?>
 <odoo noupdate="1">
-    <record model="musica.grupo" id="musica_grupo_rhcp">
-        <field name="name">Red Hot Chili Peppers</field>
-        <field name="anyo">1982</field>
-    </record>
     <record model="musica.artista" id="musica_artista_flea">
         <field name="dni">44890829G</field>
-        <field name="nombre">Flea</field>
+        <field name="name">Flea</field>
         <field name="grupo_id" ref="musica_grupo_rhcp"/>
     </record>
-    <record model="musica.artista" id="musica_artista_flea">
+    <record model="musica.artista" id="musica_artista_anthony">
         <field name="dni">12345678B</field>
-        <field name="nombre">Anthony Keidis</field>
+        <field name="name">Anthony Keidis</field>
         <field name="grupo_id" ref="musica_grupo_rhcp"/>
     </record>
-    <record model="musica.artista" id="musica_artista_flea">
+    <record model="musica.artista" id="musica_artista_john">
         <field name="dni">98765432V</field>
-        <field name="nombre">John Frusciante</field>
+        <field name="name">John Frusciante</field>
         <field name="grupo_id" ref="musica_grupo_rhcp"/>
     </record>
-    <record model="musica.artista" id="musica_artista_flea">
+    <record model="musica.artista" id="musica_artista_chad">
         <field name="dni">11235813F</field>
-        <field name="nombre">Chad Smith</field>
+        <field name="name">Chad Smith</field>
         <field name="grupo_id" ref="musica_grupo_rhcp"/>
     </record>
 </odoo>
