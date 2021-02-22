@@ -17,11 +17,21 @@ class Artista(models.Model):
         translate=False,
     )
 
-    name = fields.Char(
+    nombre = fields.Char(
         'Nombre',
         default=None,
         index=True,
-        help='Nombre dek artista',
+        help='Nombre del artista',
+        readonly=False,
+        required=True,
+        translate=False,
+    )
+
+    rol = fields.Char(
+        'Rol',
+        default=None,
+        index=True,
+        help='Papel en el grupo',
         readonly=False,
         required=True,
         translate=False,
