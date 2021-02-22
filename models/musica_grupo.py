@@ -19,6 +19,7 @@ class Grupo(models.Model):
 
     # Numeric fields:
     disco_id = fields.One2many('musica.disco', 'grupo_id', string="Disco", readOnly=True)
+    artista_id = fields.One2many('musica.artista', 'grupo_id', string="Artistas", readOnly=True)
     puntuacion = fields.Float(string='Puntuación', compute='_calcular_media')
     anyo = fields.Integer(default=1900, string="Año de fundación");
 
@@ -26,7 +27,7 @@ class Grupo(models.Model):
     pais_id = fields.Many2one('res.country', string="País del grupo")
 
     # Other fields:
-    enactivo = fields.Selection([('activo', 'Activo'), ('disuelto', 'disuelto')])
+    enactivo = fields.Selection([('activo', 'Activo'), ('disuelto', 'Disuelto')])
 
     @api.depends('disco_id')
     def _calcular_media(self):

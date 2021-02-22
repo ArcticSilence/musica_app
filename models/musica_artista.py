@@ -29,11 +29,9 @@ class Artista(models.Model):
 
     rol = fields.Char(
         'Rol',
-        default=None,
         index=True,
         help='Papel en el grupo',
         readonly=False,
-        required=True,
         translate=False,
     )
 

@@ -19,8 +19,19 @@
                             <field name="grupo_id"/>
                             <field name="comp_id"/>
                             <field name="puntuacion"/>
-                            <field name="cancion_id"/>
                         </group>
+                        <field name="cancion_id">
+                            <tree>
+                                <field name="codigo"/>
+                                <field name="titulo"/>
+                                <field name="duracion"/>
+                            </tree>
+                            <form>
+                                <field name="codigo"/>
+                                <field name="titulo"/>
+                                <field name="duracion"/>
+                            </form>
+                        </field>
                     </group>
                 </sheet>
             </form>

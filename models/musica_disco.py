@@ -31,7 +31,7 @@ class Disco(models.Model):
     # Relational fields:
     grupo_id = fields.Many2one('musica.grupo', string='Grupo')
     comp_id = fields.Many2one('musica.companyia', string='Compañía')
-    cancion_id = fields.Many2one('musica.cancion', string='Canciones')
+    cancion_id = fields.One2many('musica.cancion', 'disco_id', string='Canciones', readOnly=True)
 
     # Other fields:
     imagen_disco = fields.Image();

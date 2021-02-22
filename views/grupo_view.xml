@@ -15,6 +15,18 @@
                             <field name="anyo"/>
                             <field name="enactivo"/>
                         </group>
+                        <field name="artista_id">
+                            <tree>
+                                <field name="dni"/>
+                                <field name="nombre"/>
+                                <field name="rol"/>
+                            </tree>
+                            <form>
+                                <field name="dni"/>
+                                <field name="nombre"/>
+                                <field name="rol"/>
+                            </form>
+                        </field>
                     </group>
                 </sheet>
             </form>
@@ -29,6 +41,7 @@
                 <field name="name"/>
                 <field name="pais_id"/>
                 <field name="anyo"/>
+                <field name="enactivo"/>
                 <field name="puntuacion"/>
             </tree>
         </field>
