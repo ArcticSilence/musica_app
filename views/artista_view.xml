@@ -12,6 +12,7 @@
                         <group name="group_left">
                             <field name="dni"/>
                             <field name="name"/>
+                            <field name="grupo_id"/>
                         </group>
                     </group>
                 </sheet>
@@ -26,6 +27,7 @@
             <tree>
                 <field name="dni"/>
                 <field name="name"/>
+                <field name="grupo_id"/>
             </tree>
         </field>
     </record>

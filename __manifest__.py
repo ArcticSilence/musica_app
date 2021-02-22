@@ -10,7 +10,7 @@
         'security/ir.model.access.csv',
         'views/musica_menu.xml',
         'views/disco_view.xml',
-       # 'views/grupo_view.xml',
+        'views/grupo_view.xml',
         'views/club_view.xml',
         'views/companyia_view.xml',
         'views/artista_view.xml',
@@ -18,7 +18,9 @@
     ],
     'demo': [
         'data/disco_demo.xml',
-        'data/club_demo.xml',
         'data/companyia_demo.xml',
+        'data/club_demo.xml',
+        'data/artista_demo.xml',
+        'data/cancion_demo.xml',
     ],
 }

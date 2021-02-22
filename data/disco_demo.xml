@@ -24,6 +24,7 @@
         <field name="fecha_publicacion">1998-06-08</field>
         <field name="copias">15</field>
         <field name="grupo_id" ref="musica_grupo_rhcp"/>
+        <field name="comp_id" ref="musica_companyia_domino"/>
         <field name="puntuacion">8.5</field>
     </record>
     <record model="musica.disco" id="musica_disco_mothersmilk">
@@ -32,6 +33,7 @@
         <field name="fecha_publicacion">1989-08-16</field>
         <field name="copias">25</field>
         <field name="grupo_id" ref="musica_grupo_rhcp"/>
+        <field name="comp_id" ref="musica_companyia_domino"/>
         <field name="puntuacion">9.5</field>
     </record>
     <record model="musica.cancion" id="musica_cancion_scartissue">

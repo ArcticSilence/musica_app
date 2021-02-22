@@ -10,7 +10,7 @@
         <field name="fecha_publicacion">1910-06-28</field>
         <field name="copias">1</field>
         <field name="grupo_id" ref="musica_grupo_hotdog"/>
-        <field name="puntuacion">0.5</field>
+        <field name="puntuacion">4</field>
     </record>
     <record model="musica.companyia" id="musica_companyia_cock">
         <field name="cod">69</field>
