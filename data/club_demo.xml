@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<odoo noupdate="1">
+    <record model="musica.club" id="musica_club1">
+        <field name="name">Club1</field>
+        <field name="cod">club1</field>
+        <field name="sede">Madrid</field>
+        <field name="cod_group" id="musica_grupo_tupu"/>
+
+    </record>
+    <record model="musica.grupo" id="musica_grupo_tupu">
+        <field name="cod">25</field>
+        <field name="name">Tupu´s group</field>
+        <field name="dir">Dumb Street, 10</field>
+        <field name="fax">147896325</field>
+        <field name="tlfn">98741236</field>
+    </record>
+</odoo>
